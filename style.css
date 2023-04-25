@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ff6666;
+    width: 100%;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+li {
+    list-style-type: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+/**default styles end**/
+/**todo styles**/
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.todo-title {
+    width: 100%;
+}
+.todo-title h1 {
+    width: inherit;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+.todo-title span {
+    width: inherit;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+/**todo-list style**/
+#todo-list {
+    margin: 40px 0;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+
+/**form-post**/
+.form-post {
+    width: 100%;
+}
+.form-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+/**form-input**/
+.form-post form {
+    display: flex;
+    align-items: center;
+}
+#form-input {
+    border: none;
+    max-width: 320px;
+    width: 100%;
+    height: 50px;
+    padding: 0 0 0 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-size: 18px;
+    margin-right: 10px;
+}
+/**form-btn**/
+#form-btn {
+    transition: 0.3s all;
+    height: 50px;
+    max-width: 120px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+#form-btn:hover {
+    transition: 0.3s all;
+    background-color: rgb(0, 0, 0, 0.2);
+}
+/**todo**/
+.order-active-none {
+    display: none;
+}
+.order-active {
+    display: block;
+}
+.order-active .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.order-active .container .todo-order {
+    display: flex;
+    align-items: center;
+}
+.order-active .container .todo-order p {
+    color: #fff;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+.order-active .container .todo-order div {
+    width: 65px;
+    height: 35px;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    position: relative;
+    cursor: pointer;
+}
+.order-active .container .todo-order div span {
+    transition: 0.3s all;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(204, 34, 113);
+    opacity: 0.7;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+}
+.order-active .container .todo-order div span.todo-order-active {
+    transition: 0.3s all;
+    left: 100%;
+    transform: translateX(-100%);
+}
+.todo {
+    background-color: rgb(255, 255, 255, 0.2);
+    margin-bottom: 5px;
+}
+.todo .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.todo .container p {
+    transition: 1s all;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+.todo .container p.todo-end {
+    transition: 0.5s all;
+    opacity: 0.8;
+}
+.todo .container p::before {
+    content: "";
+    transition: 1s all;
+    width: 0%;
+}
+.todo .container p.todo-end::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 63%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    transition: 1s all;
+    background-color: #fff;
+}
+.todo .container span {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.todo .container span #check-box {
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+.todo .container span #check-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    background-color: #ff6666;
+}
+.todo .container span #check-box:checked::before {
+    content: "\2713";
+    background-color: #fff;
+    color: #ff6666;
+}
+.todo .container span #delete-todo {
+    border: none;
+    background-color: transparent;
+}
+.todo .container span #delete-todo svg path {
+    fill: #fff;
+    cursor: pointer;
+}
+.delete-todo {
+    display: none;
+}
+
+/**media style**/
+@media (max-width: 480px) {
+    #todo-list {
+        font-size: 20px;
+    }
+    .todo-title h1 {
+        font-size: 35px;
+    }
+    .todo-title span {
+        font-size: 13.5px;
+    }
+    .form-post form {
+        flex-direction: column;
+    }
+    #form-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+    #form-btn {
+        max-width: 100%;
+        font-size: 12px;
+    }
+    .form-title {
+        font-size: 18px;
+    }
+}

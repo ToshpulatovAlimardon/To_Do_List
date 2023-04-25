@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To Do list</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <div class="todo-title">
+                    <h1>Todo List</h1>
+                    <span>Get things done, one item at a time.</span>
+                </div>
+            </div>
+            <ul id="todo-list">
+                <div class="container">
+                    <i>Your todo list is empty.</i>
+                </div>
+            </ul>
+            <div class="order-active-none">
+                <div class="container">
+                    <div class="todo-order">
+                        <p>Move done items at the end?</p>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-post">
+                <div class="container">
+                    <h1 class="form-title">Add to the todo list</h1>
+                    <form>
+                        <input
+                            id="form-input"
+                            type="text"
+                            required
+                            autocomplete="off"
+                        />
+                        <button type="button" id="form-btn">ADD ITEM</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
